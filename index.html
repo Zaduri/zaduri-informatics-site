@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изучение информатики: Основы и практика</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 1rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+        section:last-child {
+            border-bottom: none;
+        }
+        h2 {
+            color: #007BFF;
+        }
+        h3 {
+            color: #0056b3;
+            margin-top: 1.5rem;
+        }
+        code {
+            background: #f8f8f8;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        pre {
+            background: #f8f8f8;
+            padding: 1rem;
+            border-left: 4px solid #007BFF;
+            overflow-x: auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        ul, ol {
+            margin-left: 1.5rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+        .active {
+            background-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Изучение информатики: От основ к практике</h1>
+        <p>Бесплатные материалы для школьников и студентов</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#basics" onclick="showSection('basics')">Основы</a></li>
+            <li><a href="#algorithms" onclick="showSection('algorithms')">Алгоритмы</a></li>
+            <li><a href="#programming" onclick="showSection('programming')">Программирование</a></li>
+            <li><a href="#resources" onclick="showSection('resources')">Ресурсы</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="basics"> ... (оставшийся код) ... </section>
+        <section id="algorithms" style="display: none;"> ... </section>
+        <section id="programming" style="display: none;"> ... </section>
+        <section id="resources" style="display: none;"> ... </section>
+    </main>
+    <footer>
+        <p>&copy; 2025. Персональный сайт преподавателя Шайхутдинова Э.Т.</p>
+    </footer>
+    <script>
+        function showSection(id) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(sec => sec.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+            const links = document.querySelectorAll('nav a');
+            links.forEach(link => link.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+        showSection('basics');
+    </script>
+</body>
+</html>
