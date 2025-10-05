@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изучение информатики: Основы и практика</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 1rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+        section:last-child {
+            border-bottom: none;
+        }
+        h2 {
+            color: #007BFF;
+        }
+        h3 {
+            color: #0056b3;
+            margin-top: 1.5rem;
+        }
+        code {
+            background: #f8f8f8;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        pre {
+            background: #f8f8f8;
+            padding: 1rem;
+            border-left: 4px solid #007BFF;
+            overflow-x: auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        ul, ol {
+            margin-left: 1.5rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+        .active {
+            background-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Изучение информатики: От основ к практике</h1>
+        <p>Бесплатные материалы для школьников и студентов</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#basics" onclick="showSection('basics')">Основы</a></li>
+            <li><a href="#algorithms" onclick="showSection('algorithms')">Алгоритмы</a></li>
+            <li><a href="#programming" onclick="showSection('programming')">Программирование</a></li>
+            <li><a href="#resources" onclick="showSection('resources')">Ресурсы</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="basics">
+            <h2>1. Основы информатики</h2>
+            <p>Информатика — это наука о обработке информации. Начни с понимания базовых понятий:</p>
+            <ul>
+                <li><strong>Биты и байты:</strong> Информация хранится в двоичном виде (0 и 1). 1 байт = 8 бит. Например, текст "A" в ASCII — 01000001.</li>
+                <li><strong>Алфавит и кодировка:</strong> Текст кодируется, например, в UTF-8 для поддержки русского языка.</li>
+                <li><strong>Логические операции:</strong> AND (И), OR (ИЛИ), NOT (НЕ). Они используются в процессорах для вычислений.</li>
+            </ul>
+            <p>Пример логической таблицы для AND:</p>
+            <table>
+                <tr><th>A</th><th>B</th><th>A AND B</th></tr>
+                <tr><td>0</td><td>0</td><td>0</td></tr>
+                <tr><td>0</td><td>1</td><td>0</td></tr>
+                <tr><td>1</td><td>0</td><td>0</td></tr>
+                <tr><td>1</td><td>1</td><td>1</td></tr>
+            </table>
+
+            <h3>1.1. Типы данных</h3>
+            <p>Данные делятся на примитивные и составные. Примитивные: целые числа (int), вещественные (float), строки (string), булевы (bool).</p>
+            <table>
+                <tr><th>Тип</th><th>Пример</th><th>Размер (примерно)</th></tr>
+                <tr><td>int</td><td>42</td><td>4 байта</td></tr>
+                <tr><td>float</td><td>3.14</td><td>8 байт</td></tr>
+                <tr><td>string</td><td>"Привет"</td><td>Зависит от длины</td></tr>
+                <tr><td>bool</td><td>True</td><td>1 байт</td></tr>
+            </table>
+
+            <h3>1.2. Структуры данных</h3>
+            <p>Массивы, списки, стеки, очереди. Массив — фиксированный набор элементов одного типа. Список — динамический.</p>
+            <p>Пример массива: [1, 2, 3]. Операции: доступ по индексу O(1), вставка O(n).</p>
+
+            <h3>1.3. Компьютерная архитектура</h3>
+            <p>Компьютер состоит из CPU (процессор), RAM (память), HDD/SSD (хранение). Процессор выполняет инструкции по модели фон Неймана.</p>
+            <p>Задача: Переведи число 10 в двоичную систему (1010).</p>
+        </section>
+
+        <section id="algorithms" style="display: none;">
+            <h2>2. Алгоритмы</h2>
+            <p>Алгоритм — это последовательность шагов для решения задачи. Они оцениваются по времени (O-нотация) и памяти.</p>
+            
+            <h3>2.1. Алгоритмы сортировки</h3>
+            <p>Сортировка упорядочивает элементы. Вот популярные:</p>
+            
+            <h4>Сортировка пузырьком (Bubble Sort)</h4>
+            <p>Сравнивает соседние элементы.</p>
+            <pre><code>Для i от 0 до n-1:
+    Для j от 0 до n-i-1:
+        Если a[j] > a[j+1]:
+            Поменять a[j] и a[j+1]</code></pre>
+            <p>Пример: [5, 3, 8, 4] → [3, 5, 4, 8] после первого прохода.</p>
+
+            <h4>Сортировка вставками (Insertion Sort)</h4>
+            <pre><code>Для i от 1 до n-1:
+    key = a[i]
+    j = i - 1
+    Пока j >= 0 и a[j] > key:
+        a[j+1] = a[j]
+        j = j - 1
+    a[j+1] = key</code></pre>
+
+            <h4>Сортировка выбором (Selection Sort)</h4>
+            <pre><code>Для i от 0 до n-1:
+    min_idx = i
+    Для j от i+1 до n:
+        Если a[j] < a[min_idx]:
+            min_idx = j
+    Поменять a[i] и a[min_idx]</code></pre>
+
+            <h4>Быстрая сортировка (Quick Sort)</h4>
+            <pre><code>Функция quicksort(a, low, high):
+    Если low < high:
+        pivot_idx = partition(a, low, high)
+        quicksort(a, low, pivot_idx - 1)
+        quicksort(a, pivot_idx + 1, high)</code></pre>
+
+            <h4>Сортировка слиянием (Merge Sort)</h4>
+            <pre><code>Функция merge_sort(a):
+    Если len(a) <= 1: Вернуть a
+    mid = len(a) // 2
+    left = merge_sort(a[:mid])
+    right = merge_sort(a[mid:])
+    Вернуть merge(left, right)</code></pre>
+
+            <h3>2.2. Алгоритмы поиска</h3>
+            <p>Поиск находит элемент в данных.</p>
+            <h4>Линейный поиск (Linear Search)</h4>
+            <p>Проверяет по порядку. O(n).</p>
+            <pre><code>Для i от 0 до n-1:
+    Если a[i] == target:
+        Вернуть i
+Вернуть -1</code></pre>
+            <p>Пример: В [1, 3, 5] найти 3 → индекс 1.</p>
+
+            <h4>Бинарный поиск (Binary Search)</h4>
+            <p>Для отсортированных данных. O(log n).</p>
+            <pre><code>low = 0, high = n-1
+Пока low <= high:
+    mid = (low + high) // 2
+    Если a[mid] == target: Вернуть mid
+    Если a[mid] < target: low = mid + 1
+    Иначе: high = mid - 1
+Вернуть -1</code></pre>
+
+            <h3>2.3. Алгоритмы на графах</h3>
+            <p>Граф — вершины и рёбра. Обход: DFS (глубина) и BFS (ширина).</p>
+            <pre><code># BFS с очередью
+queue = [start]
+visited = set()
+Пока queue:
+    node = queue.pop(0)
+    visited.add(node)
+    Для neighbor в graph[node]:
+        Если не visited: queue.append(neighbor)</code></pre>
+
+            <h3>Сравнение алгоритмов</h3>
+            <table>
+                <tr><th>Алгоритм</th><th>Тип</th><th>Лучший случай</th><th>Худший</th><th>Память</th></tr>
+                <tr><td>Пузырьком</td><td>Сортировка</td><td>O(n)</td><td>O(n²)</td><td>O(1)</td></tr>
+                <tr><td>Бинарный поиск</td><td>Поиск</td><td>O(1)</td><td>O(log n)</td><td>O(1)</td></tr>
+                <tr><td>BFS</td><td>Граф</td><td>O(V+E)</td><td>O(V+E)</td><td>O(V)</td></tr>
+            </table>
+
+            <p><strong>Практика:</strong> Реализуй бинарный поиск для отсортированного массива [1, 3, 5, 7, 9] и цели 5.</p>
+        </section>
+
+        <section id="programming" style="display: none;">
+            <h2>3. Программирование</h2>
+            <p>Начни с Python — простого языка. Установи Python с python.org. Программы состоят из переменных, циклов, условий и функций.</p>
+            
+            <h3>3.1. Основы</h3>
+            <p>Пример "Hello, World!":</p>
+            <pre><code>print("Привет, мир!")</code></pre>
+
+            <h3>3.2. Условные операторы</h3>
+            <pre><code>age = 18
+if age >= 18:
+    print("Взрослый")
+elif age >= 13:
+    print("Подросток")
+else:
+    print("Ребёнок")</code></pre>
+
+            <h3>3.3. Циклы</h3>
+            <pre><code>for i in range(5):
+    print(i)  # 0 1 2 3 4
+
+sum = 0
+i = 1
+while i <= 10:
+    sum += i
+    i += 1
+print(sum)  # 55</code></pre>
+
+            <h3>3.4. Функции</h3>
+            <pre><code>def add(a, b):
+    return a + b
+
+print(add(3, 5))  # 8</code></pre>
+
+            <h3>3.5. Списки и словари</h3>
+            <pre><code># Список
+numbers = [1, 2, 3]
+numbers.append(4)
+print(numbers)  # [1, 2, 3, 4]
+
+# Словарь
+person = {"name": "Алекс", "age": 25}
+print(person["name"])  # Алекс</code></pre>
+
+            <h3>3.6. Основы OOP</h3>
+            <pre><code>class Dog:
+    def __init__(self, name):
+        self.name = name
+    
+    def bark(self):
+        print("Гав!")
+
+my_dog = Dog("Бобик")
+my_dog.bark()</code></pre>
+
+            <p><strong>Практика:</strong> Напиши функцию, которая проверяет, является ли число простым. Тестируй на 17 (да) и 15 (нет).</p>
+        </section>
+
+        <section id="resources" style="display: none;">
+            <h2>4. Полезные ресурсы</h2>
+            <p>Вот расширенный список русскоязычных и международных ресурсов для изучения информатики и программирования. Рекомендую начинать с бесплатных курсов и практиковать ежедневно.</p>
+            <ul>
+                <li><a href="https://stepik.org/catalog?tag=informatics" target="_blank">Stepik: Курсы по информатике (бесплатные, с заданиями)</a></li>
+                <li><a href="https://www.codecademy.com/learn/learn-python-3" target="_blank">Codecademy: Python для начинающих (интерактивно)</a></li>
+                <li><a href="https://informatics.mccme.ru/" target="_blank">Информатика МЦНМО: Задачи и теория для школьников</a></li>
+                <li><a href="https://www.khanacademy.org/computing" target="_blank">Khan Academy: Компьютерные науки (видеоуроки)</a></li>
+                <li><a href="https://habr.com/ru/articles/331530/" target="_blank">Habr: 30+ ресурсов для программирования (Skillbox, Geekbrains и др.)</a></li>
+                <li><a href="https://www.kadrof.ru/articles/44711" target="_blank">Kadrof: 24 сайта для изучения программирования на русском</a></li>
+                <li><a href="https://practicum.yandex.ru/blog/top-besplatnyh-resursov-dlya-izucheniya-python/" target="_blank">Yandex Practicum: Топ-15 бесплатных ресурсов для Python</a></li>
+                <li><a href="https://ravesli.com/70-besplatnyh-resursov-dlya-izucheniya-programmirovaniya/" target="_blank">Ravesli: 70+ бесплатных ресурсов для программирования</a></li>
+                <li><a href="https://hexlet.io/" target="_blank">Hexlet: Практические курсы по программированию</a></li>
+                <li><a href="https://www.coursera.org/" target="_blank">Coursera: Курсы по Computer Science (многие бесплатны)</a></li>
+            </ul>
+            <p>Совет: Выбери 1-2 ресурса, проходи по 30-60 минут в день и решай задачи на LeetCode или Codeforces для практики.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025. Персональный сайт преподавателя Шайхутдинова Э.Т.</p>
+    </footer>
+
+    <script>
+        function showSection(id) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(sec => sec.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+            const links = document.querySelectorAll('nav a');
+            links.forEach(link => link.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+        showSection('basics');
+    </script>
+</body>
+</html>
